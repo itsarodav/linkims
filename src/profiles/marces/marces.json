@@ -1,0 +1,17 @@
+{
+    "name": "Marces",
+    "tagline": "Encuéntrame en otras plataformas",
+    "avatar": "/marces-profile.webp",
+    "links": [
+        {
+        "label": "Instagram",
+        "url": "https://instagram.com/marces",
+        "icon": "/icons/instagram.svg"
+        },
+        {
+        "label": "Spotify",
+        "url": "https://open.spotify.com/artist/...",
+        "icon": "/icons/spotify.svg"
+        }
+    ]
+}
