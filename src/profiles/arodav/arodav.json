@@ -1,0 +1,47 @@
+{
+    "name": "Andrea Robles Dávila",
+    "tagline": "Arodav · Lemonims",
+    "avatar": "/arodav-profile.webp",
+    "links": [
+        {
+        "label": "Website",
+        "url": "https://dinq.me/arodav",
+        "icon": "/icons/web.svg"
+        },
+        {
+        "label": "Linkedin",
+        "url": "https://www.linkedin.com/in/arodav/",
+        "icon": "/icons/linkedin.svg"
+        },
+        {
+        "label": "Github",
+        "url": "https://github.com/itsarodav",
+        "icon": "/icons/github.svg"
+        },
+        {
+        "label": "Behance",
+        "url": "https://www.behance.net/arodav",
+        "icon": "/icons/behance.svg"
+        },
+        {
+        "label": "Email",
+        "url": "mailto:itsarodav@gmail.com",
+        "icon": "/icons/email.svg"
+        },
+        {
+        "label": "X",
+        "url": "https://www.linkedin.com/in/arodav/",
+        "icon": "/icons/x-social.svg"
+        },
+        {
+        "label": "Instagram",
+        "url": "https://instagram.com/heymarces",
+        "icon": "/icons/instagram.svg"
+        },
+        {
+        "label": "Substack",
+        "url": "https://substack.com/@arodav",
+        "icon": "/icons/substack.svg"
+        }
+    ]
+}

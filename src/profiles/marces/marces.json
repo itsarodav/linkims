@@ -1,17 +1,47 @@
 {
-    "name": "Marces",
-    "tagline": "Encuéntrame en otras plataformas",
     "avatar": "/marces-profile.webp",
+    "name": "Marces",
+    "tagline": "Pronto más música y novedades :)",
     "links": [
         {
-        "label": "Instagram",
-        "url": "https://instagram.com/marces",
-        "icon": "/icons/instagram.svg"
+        "label": "Song",
+        "url": "https://open.spotify.com/intl-es/track/4aqrCyrTCPtYPu3BwOXRqG?si=da1f5f20c7314dc0",
+        "icon": "/icons/headphones.svg"
         },
         {
         "label": "Spotify",
-        "url": "https://open.spotify.com/artist/...",
+        "url": "https://open.spotify.com/intl-es/artist/0sGaADz9Pc3qOJWGx5OAcr?si=GVpkhzw0R5OFIE5rE7S9-w",
         "icon": "/icons/spotify.svg"
+        },
+        {
+        "label": "Website",
+        "url": "https://instagram.com/heymarces",
+        "icon": "/icons/web.svg"
+        },
+        {
+        "label": "Instagram",
+        "url": "https://instagram.com/heymarces",
+        "icon": "/icons/instagram.svg"
+        },
+        {
+        "label": "Youtube",
+        "url": "https://www.youtube.com/@MarcesHey",
+        "icon": "/icons/youtube.svg"
+        },
+        {
+        "label": "Tik tok",
+        "url": "https://www.youtube.com/@MarcesHey",
+        "icon": "/icons/tiktok.svg"
+        },
+        {
+        "label": "Facebook",
+        "url": "https://www.youtube.com/@MarcesHey",
+        "icon": "/icons/facebook.svg"
+        },
+        {
+        "label": "Email",
+        "url": "mailto:heymarces@gmail.com",
+        "icon": "/icons/email.svg"
         }
     ]
 }

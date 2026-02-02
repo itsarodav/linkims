@@ -1,74 +1,39 @@
 <!DOCTYPE html>
 <html lang="es" data-profile="marces">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marces Linkims</title>
-    <meta name="description" content="Encuéntrame en otras plataformas y redes sociales">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marces | Linkims</title>
+    <meta name="description" content="Encuéntrame en otras plataformas y redes sociales" />
 </head>
-<body class="page page--profile">
-        <header class="profile">
+
+<body class="page page--profile theme--marces">
+    <a class="page__skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="profile" role="banner">
         <div class="profile__inner">
-            <figure class="profile__avatar">
-                <img class="profile__avatar-img" src="/marces-profile.webp" alt="Imagen de perfil de Marces" width="128" height="128" loading="eager" decoding="async"/>
-            </figure>
-            <div class="profile__badge" aria-hidden="true">
-            <span class="profile__badge-emoji">👾</span>
-            </div>
+        <figure class="profile__avatar">
+            <!-- Preparando el render desde TS -->
+            <img class="profile__avatar-img" src="/marces-profile.webp" alt="Imagen de perfil de Marces" width="128" height="128" loading="eager" decoding="async"/>
+        </figure>
 
-            <div class="profile__heading">
+        <span class="profile__badge" aria-hidden="true">👾</span>
+
+        <div class="profile__heading">
             <h1 class="profile__name">Marces</h1>
-            <p class="profile__tagline">Encuéntrame en otras plataformas</p>
-            </div>
-
+            <p class="profile__tagline">Pronto más música y novedades :)</p>
         </div>
-        </header>
+        </div>
+    </header>
 
-        <main class="content" id="main">
+    <main class="page__main" id="main">
         <section class="links" aria-labelledby="links-title">
-            <h2 class="links__title" id="links-title">Enlaces</h2>
+        <h2 class="sr-only" id="links-title">Enlaces</h2>
 
-            <!-- Renderiza aquí tus links desde TS (ideal) -->
-            <ul class="links__grid" data-links-grid></ul>
-                <li class="links__item">
-                    <a class="links__card" href="https://instagram.com/marces" target="_blank" rel="noopener noreferrer">
-                        <span class="links__icon links__icon--instagram" aria-hidden="true"></span>
-                        <span class="links__card-label">Instagram</span>
-                    </a>
-                </li>
-
-                <li class="links__item">
-                    <a class="links__card" href="https://instagram.com/marces" target="_blank" rel="noopener noreferrer">
-                        <span class="links__icon links__icon--instagram" aria-hidden="true"></span>
-                        <span class="links__card-label">Instagram</span>
-                    </a>
-                </li>
-
-                <li class="links__item">
-                    <a class="links__card" href="https://instagram.com/marces" target="_blank" rel="noopener noreferrer">
-                        <span class="links__icon links__icon--instagram" aria-hidden="true"></span>
-                        <span class="links__card-label">Instagram</span>
-                    </a>
-                </li>
-
-                <li class="links__item">
-                    <a class="links__card" href="https://instagram.com/marces" target="_blank" rel="noopener noreferrer">
-                        <span class="links__icon links__icon--instagram" aria-hidden="true"></span>
-                        <span class="links__card-label">Instagram</span>
-                    </a>
-                </li>
-
-                <li class="links__item">
-                    <a class="links__card" href="https://instagram.com/marces" target="_blank" rel="noopener noreferrer">
-                        <span class="links__icon links__icon--instagram" aria-hidden="true"></span>
-                        <span class="links__card-label">Instagram</span>
-                    </a>
-                </li>
-                
-
-            </ul>
+        <!-- array links de JSON -->
+        <ul class="links__grid" data-links-grid aria-label="Enlaces de Marces"></ul>
         </section>
-        </main>
+    </main>
 
     <script type="module" src="/src/main.ts"></script>
 </body>

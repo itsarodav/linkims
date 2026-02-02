@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="es" data-profile="arodav">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arodav Linkims</title>
-    <meta name="description" content="Encuéntrame en otras plataformas y redes sociales">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arodav | Linkims</title>
+    <meta name="description" content="Encuéntrame en otras plataformas y redes sociales" />
 </head>
-<body>
+
+<body class="page page--profile theme--arodav">
+    <a class="page__skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="profile" role="banner">
+        <div class="profile__inner">
+        <figure class="profile__avatar">
+            <!-- Preparando el render desde TS -->
+            <img class="profile__avatar-img" src="/arodav-profile.webp" alt="Imagen de perfil de Arodav" width="128" height="128" loading="eager" decoding="async"/>
+        </figure>
+
+        <span class="profile__badge" aria-hidden="true">🚀</span>
+
+        <div class="profile__heading">
+            <h1 class="profile__name">Andrea Robles Dávila</h1>
+            <p class="profile__tagline">Arodav · Lemonims</p>
+        </div>
+        </div>
+    </header>
+
+    <main class="page__main" id="main">
+        <section class="links" aria-labelledby="links-title">
+        <h2 class="sr-only" id="links-title">Enlaces</h2>
+
+        <!-- array links de JSON -->
+        <ul class="links__grid" data-links-grid aria-label="Enlaces de Arodav"></ul>
+        </section>
+    </main>
+
     <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
