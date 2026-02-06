@@ -13,6 +13,7 @@ type Profile = {
 
 import marces from './profiles/marces/marces.json';
 import arodav from './profiles/arodav/arodav.json';
+import "./styles/main.scss";
 
 const PROFILES: Record<string, Profile> = {
     marces: marces as Profile,

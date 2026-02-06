@@ -1,0 +1,95 @@
+/* src/styles/tokens/_tokens.scss */
+
+/* Breakpoints (SCSS) — para usar en otros ficheros con @use */
+$breakpoint: (
+    sm: 480px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1200px
+);
+
+@mixin mq($key) {
+    @media (min-width: map-get($breakpoint, $key)) {
+        @content;
+    }
+}
+
+/* TOKENS GLOBALES (CSS variables) — mobile first */
+:root {
+    /* Layout */
+    --container-max: 520px;
+    --container-pad: 16px;
+
+    /* Spacing scale (4-based) */
+    --space-0: 0px;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 32px;
+    --space-8: 40px;
+    --space-9: 48px;
+
+    /* Component defaults */
+    --grid-gap: var(--space-4);
+    --card-pad: var(--space-4);
+    --card-min-h: 88px;
+
+    /* Radius */
+    --radius-1: 8px;
+    --radius-2: 16px;
+    --radius-3: 24px;
+    --radius-4: 32px; /* look “pill/card” */
+    --radius-round: 999px;
+
+    /* Typography */
+    --font-sans-marces: "Onest", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+    --font-sans-arodav: "Ubuntu", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+    --font-size-1: 14px;
+    --font-size-2: 16px;  /* base */
+    --font-size-3: 18px;
+    --font-size-4: 22px;  /* headings pequeños */
+    --font-size-5: 28px;  /* h1 */
+    --line-1: 1.1;
+    --line-2: 1.25;
+    --line-3: 1.5;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+
+    /* Shadows (neutras: el tema decide intensidades si quiere) */
+    --shadow-1: 0 6px 18px rgba(0, 0, 0, 0.10);
+    --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.14);
+
+    /* “Glass” helpers */
+    --blur-1: 16px;
+    --blur-2: 40px;
+
+    /* Focus */
+    --focus-ring: 2px;
+    --focus-offset: 3px;
+
+    /* Motion */
+    --dur-1: 120ms;
+    --dur-2: 200ms;
+    --ease-1: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Ajustes progresivos (mobile first) */
+@media (min-width: 480px) {
+    :root {
+        --container-pad: 18px;
+        --grid-gap: var(--space-5);
+        --card-pad: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --container-max: 640px;
+        --container-pad: 20px;
+        --grid-gap: var(--space-6);
+    }
+}

@@ -1,0 +1,23 @@
+.profile{
+    margin: 0;
+
+    &__inner { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__avatar { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__avatar-img { 
+        border-radius: var(--radius-round);
+        border: 6px solid var(--color-4);
+    }
+    //&__badge { ... }
+    //&__heading { ... }
+    //&__name { ... }
+    //&__tagline { ... }
+}
