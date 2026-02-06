@@ -6,17 +6,28 @@
         flex-direction: column;
         justify-content: center;
     }
+
     &__avatar { 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
+        width: auto;
     }
+
     &__avatar-img { 
         border-radius: var(--radius-round);
         border: 6px solid var(--color-4);
     }
-    //&__badge { ... }
+    
+    &__badge { 
+        position: absolute;
+        padding: 0;
+        right: 0;
+        bottom: 0;
+        transform: translate(25%, 25%);
+    }
     //&__heading { ... }
     //&__name { ... }
     //&__tagline { ... }
