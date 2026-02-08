@@ -6,42 +6,47 @@
         {
         "label": "Escucha 'La Niebla'",
         "url": "https://open.spotify.com/intl-es/track/4aqrCyrTCPtYPu3BwOXRqG?si=da1f5f20c7314dc0",
-        "icon": "/icons/headphones.svg"
+        "icon": "/icons/headphones.svg",
+        "layout": { "row": 1, "rowSpan": 1, "col": 1, "colSpan": 5 },
+        "variant": "cta"
         },
         {
         "label": "Spotify",
         "url": "https://open.spotify.com/intl-es/artist/0sGaADz9Pc3qOJWGx5OAcr?si=GVpkhzw0R5OFIE5rE7S9-w",
-        "icon": "/icons/spotify.svg"
+        "icon": "/icons/spotify.svg",
+        "layout": { "row": 2, "rowSpan": 2, "col": 1, "colSpan": 2 },
+        "variant": "card"
         },
         {
         "label": "Website",
         "url": "https://instagram.com/heymarces",
-        "icon": "/icons/web.svg"
+        "icon": "/icons/web.svg",
+        "layout": { "row": 2, "rowSpan": 2, "col": 4, "colSpan": 2 },
+        "variant": "card"
         },
         {
         "label": "Instagram",
         "url": "https://instagram.com/heymarces",
-        "icon": "/icons/instagram.svg"
+        "icon": "/icons/instagram.svg",
+        "layout": { "row": 4, "rowSpan": 2, "col": 1, "colSpan": 2 },
+        "variant": "card"
         },
         {
         "label": "Youtube",
         "url": "https://www.youtube.com/@MarcesHey",
-        "icon": "/icons/youtube.svg"
+        "icon": "/icons/youtube.svg",
+        "layout": { "row": 4, "rowSpan": 2, "col": 4, "colSpan": 2 },
+        "variant": "card"
         },
+
         {
-        "label": "Tik tok",
-        "url": "https://www.youtube.com/@MarcesHey",
-        "icon": "/icons/tiktok.svg"
-        },
-        {
-        "label": "Facebook",
-        "url": "https://www.youtube.com/@MarcesHey",
-        "icon": "/icons/facebook.svg"
-        },
-        {
-        "label": "Email",
-        "url": "mailto:heymarces@gmail.com",
-        "icon": "/icons/email.svg"
+        "variant": "dock",
+        "layout": { "row": 6, "rowSpan": 1, "col": 1, "colSpan": 5 },
+        "items": [
+            { "label": "TikTok", "url": "https://www.youtube.com/@MarcesHey", "icon": "/icons/tiktok.svg" },
+            { "label": "Facebook", "url": "https://www.youtube.com/@MarcesHey", "icon": "/icons/facebook.svg" },
+            { "label": "Email", "url": "mailto:heymarces@gmail.com", "icon": "/icons/email.svg" }
+        ]
         }
     ]
 }
