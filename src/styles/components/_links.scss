@@ -1,0 +1,46 @@
+.page__main{
+
+    width: 100%;
+
+    
+    .links__grid{
+        background-color: aqua;
+        padding: 0.5em;
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        grid-template-rows: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+
+        li{
+            text-decoration: none;
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            background-color: burlywood;
+        }
+    }
+
+}
+
+footer{
+    margin-top: auto;
+    padding: 1.5em;
+
+    p{
+        font-size: 0.8rem;
+        color: var(--color-footer);
+    }
+
+    a{
+        color: var(--color-footer);
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover{
+            color: var(--color-1);
+        }
+    }
+}

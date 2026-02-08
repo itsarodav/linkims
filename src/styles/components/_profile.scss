@@ -28,7 +28,19 @@
         bottom: 0;
         transform: translate(25%, 25%);
     }
-    //&__heading { ... }
-    //&__name { ... }
-    //&__tagline { ... }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__name {
+        color: var(--color-4);
+    }
+
+    &__tagline {
+        color: var(--color-4);
+    }
 }
