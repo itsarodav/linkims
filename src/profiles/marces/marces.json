@@ -21,14 +21,14 @@
         "label": "Website",
         "url": "https://instagram.com/heymarces",
         "icon": "/icons/web.svg",
-        "layout": { "row": 2, "rowSpan": 2, "col": 4, "colSpan": 2 },
+        "layout": { "row": 2, "rowSpan": 2, "col": 3, "colSpan": 3 },
         "variant": "card"
         },
         {
         "label": "Instagram",
         "url": "https://instagram.com/heymarces",
         "icon": "/icons/instagram.svg",
-        "layout": { "row": 4, "rowSpan": 2, "col": 1, "colSpan": 2 },
+        "layout": { "row": 4, "rowSpan": 2, "col": 1, "colSpan": 3 },
         "variant": "card"
         },
         {
