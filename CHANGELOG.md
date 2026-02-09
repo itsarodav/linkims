@@ -5,10 +5,27 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 
 ## [Unreleased]
 ### Added
-- Implement the grid rendering logic in `src/main.ts` to populate links per profile.
+- Focus on the Arodav profile.
 
 ### Changed
-- (none)
+- The Arodav JSON will be updated to align with all changes.
+- I will continue improving the SCSS structure.
+
+### Fixed
+- Improve theme styles for both Marces and Arodav.
+
+---
+
+## [0.3.0] - 2026-02-09
+### Added
+- Added footer styles for profile pages.
+
+### Changed
+- Improved the links grid component styles and layout.
+- Updated the grid rendering logic in `src/main.ts` to populate links per profile.
+- Refined base layout and theme tokens.
+- Updated the Marces profile JSON data.
+- Reorganized SCSS structure and component styling.
 
 ### Fixed
 - (none)
