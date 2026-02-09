@@ -1,0 +1,20 @@
+.page__footer{
+    display: flex;
+    padding: 0.5rem;
+
+}
+
+.page__footer p {
+    font-size: 0.85rem;
+    color: var(--color-footer);
+}
+
+.page__footer a {
+    color: var(--color-footer);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover{
+        color: var(--color-1);
+    }
+}

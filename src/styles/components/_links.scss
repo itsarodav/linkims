@@ -11,21 +11,19 @@
     column-gap: var(--grid-gap-col, 16px);
 
     width: 100%;
-    max-width: var(--grid-max, 25rem);
-    min-height: var(--grid-min-h, 35rem);
+    min-height: 25rem;
 
     margin-inline: auto;
 }
 
-/* Cada item se posiciona con layout (variables inyectadas desde TS) */
+/* item se posiciona con layout (variables inyectadas desde TS) */
 .links__item {
     margin: 0;
-
     grid-row: var(--row, auto) / span var(--row-span, 1);
     grid-column: var(--col, auto) / span var(--col-span, 1);
 }
 
-/* Card base (glass) */
+/* Card base */
 .links__card {
     height: 100%;
     width: 100%;
@@ -44,7 +42,7 @@
     backdrop-filter: blur(var(--blur-2));
 
     text-decoration: none;
-    color: var(--text);
+    color: var(--color-card-content);
 
     &:focus-visible {
         outline: 2px solid var(--focus);
@@ -52,39 +50,42 @@
     }
 }
 
-/* CTA (la de arriba): icono + texto en fila */
 .links__card--cta {
     padding: 1rem 3rem;
     font-weight: 700;
 }
 
-/* Cards cuadradas: icono arriba, label abajo (como tu mock) */
 .links__card--card {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     gap: 0.75rem;
+    color: var(--color-card-content)
 }
 
-/* Label */
 .links__label {
-    font-size: 1.2rem; /* 18px */
+    font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.03rem;
     color: var(--color-card-content)
+    
 }
 
-/* Iconos (v1 con <img>) */
 .links__icon-img {
     width: 32px;
     height: 32px;
     display: block;
+
+    background-color: currentColor;
+
+    -webkit-mask: var(--icon) no-repeat center / contain;
+    mask: var(--icon) no-repeat center / contain;
 }
 
-/* Dock (item del grid) */
 .links__item--dock {
     display: flex;
+    
 }
 
 .links__dock {
@@ -96,7 +97,7 @@
     justify-content: space-around;
 
     border-radius: var(--radius-card, 1.5rem);
-    border: 1px solid var(--surface-border);
+    border: 1px solid var(--color-border);
     background: var(--surface);
     box-shadow: var(--shadow-1, 0 2px 8px rgba(0, 0, 0, 0.10));
     backdrop-filter: blur(var(--blur-glass, 12px));
@@ -110,7 +111,7 @@
     justify-content: center;
 
     text-decoration: none;
-    color: var(--text);
+    color: var(--color-card-content);
 
     &:focus-visible {
         outline: 2px solid var(--focus);
@@ -119,9 +120,13 @@
     }
 }
 
-.links__dock-icon-img {
+.links__dock-icon {
     width: 28px;
     height: 28px;
     display: block;
-    color: red;
+
+    background-color: currentColor;
+
+    -webkit-mask: var(--icon) no-repeat center / contain;
+    mask: var(--icon) no-repeat center / contain;
 }

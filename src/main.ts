@@ -97,11 +97,11 @@ function createCardItem(item: LinkCard): HTMLLIElement {
         a.rel = "noopener noreferrer";
     }
 
-    const icon = document.createElement("img");
+
+    const icon = document.createElement("span");
     icon.className = "links__icon-img";
-    icon.src = item.icon;
-    icon.alt = "";
     icon.setAttribute("aria-hidden", "true");
+    icon.style.setProperty("--icon", `url("${item.icon}")`);
 
     const label = document.createElement("span");
     label.className = "links__label";
@@ -134,11 +134,10 @@ function createDockItem(dock: LinkDock): HTMLLIElement {
         a.rel = "noopener noreferrer";
         }
 
-        const icon = document.createElement("img");
-        icon.className = "links__dock-icon-img";
-        icon.src = d.icon;
-        icon.alt = "";
+        const icon = document.createElement("span");
+        icon.className = "links__dock-icon";
         icon.setAttribute("aria-hidden", "true");
+        icon.style.setProperty("--icon", `url("${d.icon}")`);
 
         a.appendChild(icon);
         nav.appendChild(a);

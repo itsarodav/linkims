@@ -1,6 +1,13 @@
-.page__main{
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-gradient);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 100vh;
     width: 100%;
-    padding: 24px 16px;
-    display: grid;
-    place-items: start center;
+
 }
