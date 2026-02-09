@@ -9,14 +9,16 @@
 
     &__avatar { 
         display: flex;
+        position: relative;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: relative;
         width: auto;
     }
 
     &__avatar-img { 
+        position: relative;
+        display: inline-block;
         border-radius: var(--radius-round);
         border: 6px solid var(--color-4);
     }
@@ -24,9 +26,11 @@
     &__badge { 
         position: absolute;
         padding: 0;
-        right: 0;
-        bottom: 0;
-        transform: translate(25%, 25%);
+        right: 56px;
+        top: 88px;
+        //transform: translate(25%, 25%);
+        font-size: 1.5rem;
+        line-height: 1;
     }
 
     &__heading {
