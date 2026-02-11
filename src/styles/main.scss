@@ -7,6 +7,9 @@
 @use "./base/base";
 @use "./base/layout";
 
+/* Pages */
+@use "./pages/index";
+
 /* Components */
 @use "./components/profile";
 @use "./components/links";

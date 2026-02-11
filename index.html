@@ -4,30 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/linkims.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.scss">
-    <title>linkims</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Linkims</title>
   </head>
-  <body>
-    <div id="app">
-      <header>
-        <h1>Linkims</h1>
+  <body class="page page--home">
+    <div id="app" class="home">
+      <header class="home__header">
+        <h1 class="home__title">Linkims</h1>
       </header>
-      <main>
-        <h2>Selecciona un perfil</h2>
-        <nav aria-label="Selección de perfil">
-          <ul>
-            <li><a href="./marces/">Marces</a></li>
-            <li><a href="./arodav/">Arodav</a></li>
+
+      <main class="page__main">
+        <h2 class="home__subtitle">Selecciona un perfil</h2>
+
+        <nav class="home__nav" aria-label="Selección de perfil">
+          <ul class="home__list">
+            <li class="home__item"><a class="home__link" href="./marces/">Marces</a></li>
+            <li class="home__item"><a class="home__link" href="./arodav/">Arodav</a></li>
           </ul>
         </nav>
       </main>
-      <footer>
-        <p>
-          crafted with 💙 and 🎧 by
-          <a href="https://github.com/itsarodav">arodav</a>
-        </p>
-      </footer>
     </div>
+    <footer class="page__footer">
+        <p>
+          crafted with 💙 and 🎧 by <a class="home__footer-link" href="https://github.com/itsarodav">arodav</a>
+        </p>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
