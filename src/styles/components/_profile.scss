@@ -6,6 +6,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 0.5rem;
     }
 
     &__avatar { 
@@ -40,13 +41,17 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 0.5rem;
     }
     
     &__name {
         color: var(--color-4);
+        letter-spacing: -0.08rem;
     }
 
     &__tagline {
         color: var(--color-4);
+        line-height: 1;
+        letter-spacing: -0.02rem;
     }
 }
