@@ -1,47 +1,63 @@
 {
+    "avatar": "/arodav-profile.webp",
     "name": "Andrea Robles Dávila",
     "tagline": "Arodav · Lemonims",
-    "avatar": "/arodav-profile.webp",
     "links": [
         {
-        "label": "Website",
+        "label": "Web Portfolio",
         "url": "https://dinq.me/arodav",
-        "icon": "/icons/web.svg"
+        "icon": "/icons/web.svg",
+        "layout": { "row": 1, "rowSpan": 1, "col": 1, "colSpan": 5 },
+        "variant": "cta"
         },
         {
-        "label": "Linkedin",
+        "label": "LinkedIn",
         "url": "https://www.linkedin.com/in/arodav/",
-        "icon": "/icons/linkedin.svg"
+        "icon": "/icons/linkedin.svg",
+        "layout": { "row": 2, "rowSpan": 2, "col": 1, "colSpan": 3 },
+        "variant": "card"
         },
         {
-        "label": "Github",
+        "label": "GitHub",
         "url": "https://github.com/itsarodav",
-        "icon": "/icons/github.svg"
+        "icon": "/icons/github.svg",
+        "layout": { "row": 2, "rowSpan": 2, "col": 4, "colSpan": 2 },
+        "variant": "card"
         },
         {
         "label": "Behance",
         "url": "https://www.behance.net/arodav",
-        "icon": "/icons/behance.svg"
-        },
-        {
-        "label": "Email",
-        "url": "mailto:itsarodav@gmail.com",
-        "icon": "/icons/email.svg"
-        },
-        {
-        "label": "X",
-        "url": "https://www.linkedin.com/in/arodav/",
-        "icon": "/icons/x-social.svg"
-        },
-        {
-        "label": "Instagram",
-        "url": "https://instagram.com/heymarces",
-        "icon": "/icons/instagram.svg"
+        "icon": "/icons/behance.svg",
+        "layout": { "row": 4, "rowSpan": 2, "col": 1, "colSpan": 2 },
+        "variant": "card"
         },
         {
         "label": "Substack",
         "url": "https://substack.com/@arodav",
-        "icon": "/icons/substack.svg"
+        "icon": "/icons/substack.svg",
+        "layout": { "row": 4, "rowSpan": 2, "col": 3, "colSpan": 3 },
+        "variant": "card"
+        },
+        {
+        "variant": "dock",
+        "layout": { "row": 6, "rowSpan": 1, "col": 1, "colSpan": 5 },
+        "items": [
+            {
+            "label": "Email",
+            "url": "mailto:itsarodav@gmail.com",
+            "icon": "/icons/email.svg"
+            },
+            {
+            "label": "X",
+            "url": "https://www.linkedin.com/in/arodav/",
+            "icon": "/icons/x-social.svg"
+            },
+            {
+            "label": "Instagram",
+            "url": "https://instagram.com/heymarces",
+            "icon": "/icons/instagram.svg"
+            }
+        ]
         }
     ]
 }

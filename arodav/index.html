@@ -15,17 +15,16 @@
 
     <header class="profile" role="banner">
         <div class="profile__inner">
-        <figure class="profile__avatar">
-            <!-- Preparando el render desde TS -->
-            <img class="profile__avatar-img" src="/arodav-profile.webp" alt="Imagen de perfil de Arodav" width="128" height="128" loading="eager" decoding="async"/>
-        </figure>
+            <figure class="profile__avatar">
+                <!-- Preparando el render desde TS -->
+                <img class="profile__avatar-img" src="/arodav-profile.webp" alt="Imagen de perfil de Arodav" width="128" height="128" loading="eager" decoding="async"/>
+                <span class="profile__badge" aria-hidden="true">🚀</span>
+            </figure>
 
-        <span class="profile__badge" aria-hidden="true">🚀</span>
-
-        <div class="profile__heading">
-            <h1 class="profile__name">Andrea Robles Dávila</h1>
-            <p class="profile__tagline">Arodav · Lemonims</p>
-        </div>
+            <div class="profile__heading">
+                <h1 class="profile__name" data-profile-name></h1>
+                <p class="profile__tagline" data-profile-tagline></p>
+            </div>
         </div>
     </header>
 
@@ -37,7 +36,7 @@
         <ul class="links__grid" data-links-grid aria-label="Enlaces de Arodav"></ul>
         </section>
     </main>
-    <footer>
+    <footer class="page__footer">
         <p>
             crafted with 💙 and 🎧 by
             <a href="https://github.com/itsarodav">arodav</a>
