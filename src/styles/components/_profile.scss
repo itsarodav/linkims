@@ -46,11 +46,14 @@
     
     &__name {
         color: var(--color-4);
-        letter-spacing: -0.08rem;
+        font-family: var(--font-name, var(--font-sans));
+        letter-spacing: var(--letter-spacing-name, -0.08rem);
     }
 
     &__tagline {
         color: var(--color-4);
+        font-family: var(--font-body, var(--font-sans));
+        font-weight: var(--font-weight-tagline, inherit);
         line-height: 1;
         letter-spacing: -0.02rem;
     }

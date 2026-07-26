@@ -12,7 +12,7 @@
         },
         {
         "label": "Website",
-        "url": "https://example.com",
+        "url": "https://www.blancaferrermusic.com/",
         "icon": "/icons/web.svg",
         "layout": { "row": 2, "rowSpan": 2, "col": 1, "colSpan": 2 },
         "variant": "card"
@@ -33,7 +33,7 @@
         },
         {
         "label": "TikTok",
-        "url": "https://example.com",
+        "url": "https://www.tiktok.com/@blancaferrermusic?is_from_webapp=1&sender_device=pc",
         "icon": "/icons/tiktok.svg",
         "layout": { "row": 4, "rowSpan": 2, "col": 4, "colSpan": 2 },
         "variant": "card"
