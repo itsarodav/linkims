@@ -31,7 +31,7 @@
         right: 2px;
         bottom: 28px;
         transform: translate(35%, 35%);
-        font-size: 1.5rem;
+        font-size: var(--font-size-5);
         line-height: 1;
         pointer-events: none;
     }
@@ -46,6 +46,7 @@
     
     &__name {
         color: var(--color-4);
+        font-size: var(--font-size-6);
         font-family: var(--font-name, var(--font-sans));
         letter-spacing: var(--letter-spacing-name, -0.08rem);
     }
