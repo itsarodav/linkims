@@ -19,7 +19,7 @@
         },
         {
         "label": "Spotify",
-        "url": "https://open.spotify.com/artist/17WhWrgt4kJEjJZZgJ5wAE?si=4zdf3pVdTDmiqXaT109-3Q&utm_source=copy-link",
+        "url": "https://open.spotify.com/artist/17WhWrgt4kJEjJZZgJ5wAE?si=lRO-1QJpQgSpLk8quI463g&utm_source=copy-link",
         "icon": "/icons/spotify.svg",
         "layout": { "row": 2, "rowSpan": 2, "col": 3, "colSpan": 3 },
         "variant": "card"
