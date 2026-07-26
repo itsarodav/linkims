@@ -5,14 +5,31 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 
 ## [Unreleased]
 ### Added
-- Focus on the Arodav profile.
+- Add `README.md` with the project case study to provide product and technical context.
 
 ### Changed
-- The Arodav JSON will be updated to align with all changes.
-- I will continue improving the SCSS structure.
+- Document the profile model, theming decisions, and styling structure in the README.
 
 ### Fixed
-- Improve theme styles for both Marces and Arodav.
+- (none)
+
+---
+
+## [1.0.0] - 2026-02-11
+### Added
+- Added minimum styling and structure for the home page.
+- Added a dedicated home page stylesheet at `src/styles/pages/_index.scss`.
+- Added a semantic footer on the home page with author attribution and link.
+
+### Changed
+- Updated the Arodav profile theme across HTML, theme tokens, and profile styles.
+- Improved profile badge styling and adjusted profile container spacing.
+- Refined shared styles in base layout, links, profile components, and main SCSS composition.
+- Updated Arodav profile content and assets (`src/profiles/arodav/arodav.json` and `public/arodav-profile.webp`).
+- Updated profile page markup for Arodav and Marces to align with current theme and structure.
+
+### Fixed
+- (none)
 
 ---
 
