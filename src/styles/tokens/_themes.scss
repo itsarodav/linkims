@@ -29,6 +29,24 @@
     --color-border-hover: #C0C0C0;
 
     --bg-card: linear-gradient(89deg, rgba(251, 251, 251, 0.28) 0.41%, rgba(115, 115, 115, 0.10) 97.28%);
-    --bg-card-hover: linear-gradient(125deg, rgba(249, 249, 249, 0.50) 9.15%, rgba(226, 226, 226, 0.50) 94.77%); 
+    --bg-card-hover: linear-gradient(125deg, rgba(249, 249, 249, 0.50) 9.15%, rgba(226, 226, 226, 0.50) 94.77%);
     --bg-gradient: linear-gradient(180deg, #FEFEFE 27.64%, #1887AF 46.51%, #0A2B7D 76.52%, #0C1827 95.93%);
+}
+
+.theme--blanca-ferrer {
+    --font-sans: var(--font-sans-arodav);
+
+    --color-1: #0F1C3D;
+    --color-2: #18654A;
+    --color-3: #0F8AAC;
+    --color-4: #fefefe;
+    --color-avatar: #fefefe;
+    --color-card-content: #fefefe;
+    --color-footer: #f7f7f7;
+    --color-border: #F5F5F5;
+    --color-border-hover: #C0C0C0;
+
+    --bg-card: linear-gradient(89deg, rgba(251, 251, 251, 0.28) 0.41%, rgba(115, 115, 115, 0.10) 97.28%);
+    --bg-card-hover: linear-gradient(125deg, rgba(249, 249, 249, 0.50) 9.15%, rgba(226, 226, 226, 0.50) 94.77%);
+    --bg-gradient: linear-gradient(180deg, #FEFEFE 5%, #0F8AAC 30%, #18654A 58%, #1c253b 82%);
 }

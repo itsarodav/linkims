@@ -25,4 +25,7 @@ dist-ssr
 
 # Env files (si algún día usas variables)
 .env
-.env.* 
+.env.*
+
+# Claude Code
+.claude

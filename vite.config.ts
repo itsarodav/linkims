@@ -7,6 +7,7 @@ export default defineConfig({
         input: {
             arodav: resolve(__dirname, "arodav/index.html"),
             marces: resolve(__dirname, "marces/index.html"),
+            blancaFerrer: resolve(__dirname, "blanca-ferrer/index.html"),
             // opcional: home
             index: resolve(__dirname, "index.html"),
         },

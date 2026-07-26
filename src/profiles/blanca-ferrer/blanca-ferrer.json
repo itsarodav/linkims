@@ -1,0 +1,49 @@
+{
+    "avatar": "/profile-blanca.webp",
+    "name": "Blanca Ferrer",
+    "tagline": "Pianista, compositora y creadora",
+    "links": [
+        {
+        "label": "\"Helena\" Video Oficial",
+        "url": "https://youtu.be/60sEKpCR2T8?si=Ga9NEbWsoW5C_seo",
+        "icon": "/icons/youtube.svg",
+        "layout": { "row": 1, "rowSpan": 1, "col": 1, "colSpan": 5 },
+        "variant": "cta"
+        },
+        {
+        "label": "Website",
+        "url": "https://example.com",
+        "icon": "/icons/web.svg",
+        "layout": { "row": 2, "rowSpan": 2, "col": 1, "colSpan": 2 },
+        "variant": "card"
+        },
+        {
+        "label": "Spotify",
+        "url": "https://open.spotify.com/intl-es/artist/17WhWrgt4kJEjJZZgJ5wAE?si=4GeyLpulSzSGjIQr4vliRQ",
+        "icon": "/icons/spotify.svg",
+        "layout": { "row": 2, "rowSpan": 2, "col": 3, "colSpan": 3 },
+        "variant": "card"
+        },
+        {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/blancaferrermusic?igsh=aWVmdGl2bzBiaDd0",
+        "icon": "/icons/instagram.svg",
+        "layout": { "row": 4, "rowSpan": 2, "col": 1, "colSpan": 3 },
+        "variant": "card"
+        },
+        {
+        "label": "TikTok",
+        "url": "https://example.com",
+        "icon": "/icons/tiktok.svg",
+        "layout": { "row": 4, "rowSpan": 2, "col": 4, "colSpan": 2 },
+        "variant": "card"
+        },
+
+        {
+        "label": "hi@lemonims.com",
+        "url": "mailto:hi@lemonims.com",
+        "icon": "/icons/email.svg",
+        "layout": { "row": 6, "rowSpan": 1, "col": 1, "colSpan": 5 }
+        }
+    ]
+}

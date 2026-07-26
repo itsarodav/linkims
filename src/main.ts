@@ -2,6 +2,7 @@ import "./styles/main.scss";
 
 import marces from "./profiles/marces/marces.json";
 import arodav from "./profiles/arodav/arodav.json";
+import blancaFerrer from "./profiles/blanca-ferrer/blanca-ferrer.json";
 
 type GridLayout = {
     row: number;
@@ -43,6 +44,7 @@ type Profile = {
 const PROFILES: Record<string, Profile> = {
     marces: marces as Profile,
     arodav: arodav as Profile,
+    "blanca-ferrer": blancaFerrer as Profile,
 };
 
 const root = document.documentElement;
