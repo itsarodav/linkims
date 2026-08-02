@@ -1,5 +1,5 @@
 {
-    "avatar": "/marces-profile.webp",
+    "avatar": "/profile-marces-v2-2.webp",
     "name": "Marces",
     "tagline": "Pronto más música y novedades :)",
     "links": [
@@ -19,7 +19,7 @@
         },
         {
         "label": "Website",
-        "url": "https://instagram.com/heymarces",
+        "url": "https://heymarces.com",
         "icon": "/icons/web.svg",
         "layout": { "row": 2, "rowSpan": 2, "col": 3, "colSpan": 3 },
         "variant": "card"
@@ -40,13 +40,10 @@
         },
 
         {
-        "variant": "dock",
-        "layout": { "row": 6, "rowSpan": 1, "col": 1, "colSpan": 5 },
-        "items": [
-            { "label": "TikTok", "url": "https://www.youtube.com/@MarcesHey", "icon": "/icons/tiktok.svg" },
-            { "label": "Facebook", "url": "https://www.youtube.com/@MarcesHey", "icon": "/icons/facebook.svg" },
-            { "label": "Email", "url": "mailto:heymarces@gmail.com", "icon": "/icons/email.svg" }
-        ]
+        "label": "hi@lemonims.com",
+        "url": "mailto:hi@lemonims.com",
+        "icon": "/icons/email.svg",
+        "layout": { "row": 6, "rowSpan": 1, "col": 1, "colSpan": 5 }
         }
     ]
 }
