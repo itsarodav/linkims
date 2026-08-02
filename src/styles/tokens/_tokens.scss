@@ -47,12 +47,15 @@ $breakpoint: (
     /* Typography */
     --font-sans-marces: "Onest", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
     --font-sans-arodav: "Ubuntu", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-    --font-size-1: 0.875rem;
-    --font-size-2: 1rem;  /* base */
-    --font-size-3: 1.125rem;
-    --font-size-4: 1.375rem;  /* headings pequeños */
-    --font-size-5: 1.5rem;
-    --font-size-6: 1.8rem;
+    --font-size-1: 0.75rem;
+    --font-size-2: 0.875rem;  /* base */
+    --font-size-3: 1rem;
+    --font-size-4: 1.2rem;  /* headings pequeños */
+    --font-size-5: 1.3rem;
+    --font-size-6: 1.6rem;
+
+    /* Icon size */
+    --icon-size: 26px;
     --line-1: 1.1;
     --line-2: 1.25;
     --line-3: 1.5;
@@ -84,6 +87,15 @@ $breakpoint: (
         --container-pad: 18px;
         --grid-gap: var(--space-5);
         --card-pad: 20px;
+
+        --font-size-1: 0.875rem;
+        --font-size-2: 1rem;
+        --font-size-3: 1.125rem;
+        --font-size-4: 1.375rem;
+        --font-size-5: 1.5rem;
+        --font-size-6: 1.8rem;
+
+        --icon-size: 32px;
     }
 }
 

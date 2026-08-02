@@ -89,8 +89,8 @@
 }
 
 .links__icon-img {
-    width: 32px;
-    height: 32px;
+    width: var(--icon-size, 32px);
+    height: var(--icon-size, 32px);
     display: block;
 
     background-color: currentColor;
@@ -146,8 +146,8 @@
 }
 
 .links__dock-icon {
-    width: 32px;
-    height: 32px;
+    width: var(--icon-size, 32px);
+    height: var(--icon-size, 32px);
     display: block;
 
     background-color: currentColor;
