@@ -33,7 +33,7 @@
         },
         {
         "label": "Youtube",
-        "url": "https://www.youtube.com/@MarcesHey",
+        "url": "https://www.youtube.com/@heymarces",
         "icon": "/icons/youtube.svg",
         "layout": { "row": 4, "rowSpan": 2, "col": 4, "colSpan": 2 },
         "variant": "card"
