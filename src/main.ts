@@ -189,3 +189,13 @@ function init() {
 }
 
 init();
+
+/* Home entrance — double-rAF ensures the browser has painted
+   the opacity:0 / scale(0.97) state before we trigger transitions */
+if (document.body.classList.contains("page--home")) {
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+        document.body.classList.add("is-loaded");
+        });
+    });
+}

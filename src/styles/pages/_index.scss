@@ -71,10 +71,9 @@
 /* ── Artist grid ── */
 .home__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 1fr;
-  gap: 1px;
-  background: rgba(10, 70, 180, 0.18);
+  gap: 0;
   flex: 5;
 }
 
@@ -85,12 +84,17 @@
   overflow: hidden;
   text-decoration: none;
   background: var(--color-cream);
-  transition: filter var(--dur-2) var(--ease-1);
+  transition: filter var(--dur-2) var(--ease-1),
+              transform 160ms var(--ease-1);
 
   &:hover,
   &:focus-visible {
     filter: brightness(1.04);
     outline: none;
+  }
+
+  &:active {
+    transform: scale(0.97);
   }
 }
 
@@ -114,6 +118,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform var(--dur-2) var(--ease-1);
+
+  .home__card:hover & {
+    transform: scale(1.03);
+  }
 }
 
 .home__card--tall .home__card-img {
@@ -162,18 +171,11 @@
 
 .home__card-name {
   font-family: var(--font-sans);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: -0.03em;
   color: #fefefe;
-  white-space: nowrap;
-}
-
-.home__card-name--sm {
-  font-size: 18px;
-  font-weight: 600;
-  white-space: normal;
 }
 
 .home__card-cta {
@@ -224,6 +226,60 @@
     width: 16px;
     height: 16px;
     filter: brightness(0) invert(1);
+  }
+}
+
+/* ── Page-load entrances ── */
+.home__logo,
+.home__hero-title {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 400ms var(--ease-1),
+              transform 400ms var(--ease-1);
+}
+
+.home__hero-title {
+  transition-delay: 80ms;
+}
+
+.home__card--tall,
+.home__card--top,
+.home__card--bottom {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: filter var(--dur-2) var(--ease-1),
+              transform 160ms var(--ease-1),
+              opacity 350ms var(--ease-1);
+}
+
+.home__card--tall  { transition-delay: 100ms; }
+.home__card--top   { transition-delay: 160ms; }
+.home__card--bottom { transition-delay: 220ms; }
+
+.is-loaded .home__logo,
+.is-loaded .home__hero-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.is-loaded .home__card--tall,
+.is-loaded .home__card--top,
+.is-loaded .home__card--bottom {
+  opacity: 1;
+  transform: scale(1);
+  transition: filter var(--dur-2) var(--ease-1),
+              transform 160ms var(--ease-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home__logo,
+  .home__hero-title,
+  .home__card--tall,
+  .home__card--top,
+  .home__card--bottom {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
