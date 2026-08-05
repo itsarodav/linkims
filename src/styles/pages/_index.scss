@@ -48,7 +48,7 @@
   font-size: clamp(32px, 8vw, 56px);
   line-height: 0.95;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(--color-light);
   margin: 0;
 }
 
@@ -82,7 +82,7 @@
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  background: var(--color-cream);
+  background: var(--color-dark);
   transition: filter var(--dur-2) var(--ease-1),
               transform 160ms var(--ease-1);
 
@@ -179,7 +179,7 @@
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: -0.03em;
-  color: #fefefe;
+  color: var(--color-light);
 }
 
 .home__card-cta {
@@ -213,7 +213,7 @@
 }
 
 .home__contact-link--main {
-  color: #fff;
+  color: var(--color-light);
   font-size: 14px;
 }
 
