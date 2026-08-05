@@ -33,7 +33,6 @@
   gap: clamp(8px, 2dvh, 20px);
   flex: 2.5;
   padding: clamp(24px, 4dvh, 56px) var(--space-5) clamp(20px, 2.5dvh, 32px);
-
   background: var(--color-blue);
 }
 
@@ -74,7 +73,7 @@
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 1fr;
   gap: 0;
-  flex: 6.5;
+  flex: 7.5;
 }
 
 
