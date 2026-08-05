@@ -31,14 +31,14 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: clamp(8px, 2dvh, 20px);
-  flex: 5;
-  padding: clamp(16px, 4dvh, 48px) var(--space-5) clamp(12px, 2.5dvh, 24px);
+  flex: 3;
+  padding: clamp(24px, 4dvh, 56px) var(--space-5) clamp(20px, 2.5dvh, 32px);
 
   background: var(--color-blue);
 }
 
 .home__logo {
-  width: clamp(72px, 14vw, 96px);
+  width: clamp(80px, 14vw, 108px);
   height: auto;
   object-fit: contain;
 }
@@ -46,7 +46,7 @@
 .home__hero-title {
   font-family: var(--font-sans);
   font-weight: 800;
-  font-size: clamp(28px, 8vw, 48px);
+  font-size: clamp(32px, 8vw, 56px);
   line-height: 0.95;
   letter-spacing: -0.02em;
   color: #fff;
@@ -74,7 +74,7 @@
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 1fr;
   gap: 0;
-  flex: 5;
+  flex: 7;
 }
 
 
