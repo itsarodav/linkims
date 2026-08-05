@@ -198,4 +198,29 @@ if (document.body.classList.contains("page--home")) {
         document.body.classList.add("is-loaded");
         });
     });
+
+    /* Favicon alternates blue/green every 2s when the tab is hidden */
+    const favicon = document.querySelector<HTMLLinkElement>('link[rel="icon"]');
+    if (favicon) {
+        let intervalId: ReturnType<typeof setInterval> | null = null;
+        let isBlue = false;
+
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                intervalId = setInterval(() => {
+                    isBlue = !isBlue;
+                    favicon.href = isBlue
+                        ? "/favicon-linkims-blue.svg"
+                        : "/favicon-linkims.svg";
+                }, 2000);
+            } else {
+                if (intervalId !== null) {
+                    clearInterval(intervalId);
+                    intervalId = null;
+                }
+                favicon.href = "/favicon-linkims.svg";
+                isBlue = false;
+            }
+        });
+    }
 }
