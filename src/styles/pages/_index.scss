@@ -49,7 +49,7 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: clamp(8px, 2dvh, 20px);
-  flex: 3;
+  flex: 4;
   padding: clamp(16px, 4dvh, 48px) var(--space-5) clamp(12px, 2.5dvh, 24px);
 
   background-color: oklch(8% 0.04 260);
@@ -149,7 +149,9 @@
 
 /* ── Intro (el circuito) ── */
 .home__intro {
-  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   background: var(--color-lime);
   padding: clamp(10px, 2dvh, 26px) var(--space-5);
   border-bottom: 1px solid rgba(10, 70, 180, 0.25);
@@ -158,8 +160,9 @@
 .home__intro-label {
   display: block;
   font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: -0.01em;
   color: var(--color-blue);
   text-transform: uppercase;
   margin-bottom: var(--space-2);
@@ -168,8 +171,8 @@
 .home__intro-text {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 15px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.4;
   color: var(--color-dark);
 }
 
@@ -180,7 +183,7 @@
   grid-template-rows: 1fr 1fr;
   gap: 1px;
   background: rgba(10, 70, 180, 0.18);
-  flex: 7;
+  flex: 6;
 }
 
 
@@ -306,7 +309,7 @@
 .home__contact-label {
   font-family: var(--font-mono);
   color: var(--color-lime);
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -314,7 +317,7 @@
 .home__contact-link {
   color: rgba(255, 255, 255, 0.65);
   font-family: var(--font-sans);
-  font-size: 13px;
+  font-size: 12px;
   text-decoration: none;
   transition: color var(--dur-1) var(--ease-1);
 
@@ -326,7 +329,7 @@
 
 .home__contact-link--main {
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .home__contact-social {
@@ -339,8 +342,8 @@
   display: flex;
 
   img {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     filter: brightness(0) invert(1);
   }
 }
