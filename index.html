@@ -1,37 +1,76 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/linkims.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Onest:wght@100..900&display=swap" rel="stylesheet">
     <title>Linkims</title>
   </head>
   <body class="page page--home">
     <div id="app" class="home">
-      <header class="home__header">
-        <h1 class="home__title">Linkims</h1>
+
+      <!-- Hero -->
+      <header class="home__hero">
+        <div class="home__hero-noise"></div>
+        <img src="/vector-lemonims.svg" alt="Lemonims" class="home__logo" />
+        <h1 class="home__hero-title">in your system</h1>
       </header>
 
-      <main class="page__main">
-        <h2 class="home__subtitle">Selecciona un perfil</h2>
+      <!-- Sabor nuevo -->
+      <section class="home__intro">
+        <span class="home__intro-label">EL CIRCUITO</span>
+        <p class="home__intro-text">Sello, booking y management. Música en loop corriendo por tu sistema.</p>
+      </section>
 
-        <nav class="home__nav" aria-label="Selección de perfil">
-          <ul class="home__list">
-            <li class="home__item"><a class="home__link" href="./marces/">Marces</a></li>
-            <li class="home__item"><a class="home__link" href="./arodav/">Arodav</a></li>
-            <li class="home__item"><a class="home__link" href="./blanca-ferrer/">Blanca Ferrer</a></li>
-          </ul>
-        </nav>
+      <!-- Grid artistas -->
+      <main class="home__grid">
+        <a href="./blanca-ferrer/" class="home__card home__card--tall">
+          <img src="/profile-blanca.webp" alt="Blanca Ferrer" class="home__card-img" />
+          <div class="home__card-gradient"></div>
+          <div class="home__card-info">
+            <span class="home__card-badge">nuevo álbum</span>
+            <span class="home__card-name">Blanca Ferrer</span>
+            <span class="home__card-cta">ver perfil →</span>
+          </div>
+        </a>
+
+        <a href="./marces/" class="home__card home__card--top">
+          <img src="/profile-marces-v2-2.webp" alt="Marces" class="home__card-img" />
+          <div class="home__card-gradient home__card-gradient--short"></div>
+          <div class="home__card-info">
+            <span class="home__card-name">Marces</span>
+            <span class="home__card-cta">ver perfil →</span>
+          </div>
+        </a>
+
+        <a href="./blanca-ferrer/" class="home__card home__card--bottom">
+          <img src="/blanca-helena.png" alt="Helena — video oficial" class="home__card-img" />
+          <div class="home__card-gradient home__card-gradient--short"></div>
+          <span class="home__card-badge home__card-badge--top-right">video oficial</span>
+          <div class="home__card-info">
+            <h4 class="home__card-name home__card-name--sm">"Helena" Nuevo single</h4>
+          </div>
+        </a>
       </main>
+
+      <!-- Contacto -->
+      <footer class="home__contact">
+        <span class="home__contact-label">contacto</span>
+        <a href="mailto:hi@lemonims.com" class="home__contact-link home__contact-link--main">hi@lemonims.com</a>
+        <nav class="home__contact-social" aria-label="Redes sociales">
+          <a href="https://instagram.com/lemonims" target="_blank" rel="noopener noreferrer" class="home__contact-icon" aria-label="Instagram">
+            <img src="/icons/instagram.svg" alt="" />
+          </a>
+          <a href="https://x.com/lemonimsco" target="_blank" rel="noopener noreferrer" class="home__contact-icon" aria-label="X">
+            <img src="/icons/x-social.svg" alt="" />
+          </a>
+        </nav>
+      </footer>
+
     </div>
-    <footer class="page__footer">
-        <p>
-          crafted with 💙 and 🎧 by <a class="home__footer-link" href="https://arodav.com/" target="_blank" rel="noopener noreferrer">arodav</a>
-        </p>
-    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
