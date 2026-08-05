@@ -49,7 +49,7 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: clamp(8px, 2dvh, 20px);
-  flex: 4;
+  flex: 5;
   padding: clamp(16px, 4dvh, 48px) var(--space-5) clamp(12px, 2.5dvh, 24px);
 
   background-color: oklch(8% 0.04 260);
@@ -183,7 +183,7 @@
   grid-template-rows: 1fr 1fr;
   gap: 1px;
   background: rgba(10, 70, 180, 0.18);
-  flex: 6;
+  flex: 5;
 }
 
 
