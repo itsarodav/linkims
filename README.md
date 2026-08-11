@@ -34,6 +34,24 @@ La restricción principal no era técnica sino de producto: **cada perfil debe s
 
 ---
 
+## Resultados
+
+**Bundle final** (minificado, hashed):
+
+| | Tamaño |
+|---|---|
+| JavaScript | 6.2 KB |
+| CSS | 12 KB |
+| **Total core** | **18.2 KB** |
+
+**Código fuente:** 226 líneas de TypeScript (toda la lógica) · 778 líneas de SCSS (todo el sistema visual) · 0 dependencias de producción.
+
+**Sistema de diseño:** 42 design tokens en `:root` · 3 temas con ~20 custom properties cada uno · 4 breakpoints — responsive automático via tokens.
+
+**Accesibilidad:** HTML semántico con landmarks (`header`, `main`, `nav`, `footer`) · 14 atributos ARIA · skip links en todas las páginas · `prefers-reduced-motion` respetado.
+
+---
+
 ## Estructura
 
 ```
