@@ -1,83 +1,83 @@
 # Linkims
 
-Plataforma de enlaces para artistas de [Lemonims](https://lemonims.com). Sello discográfico, booking y management. Producto en producción con usuarios reales.
+Link-in-bio platform for [Lemonims](https://lemonims.com) artists. Record label, booking, and management. Live product with real users.
 
 [Home](https://link.lemonims.com/) · [Marces](https://link.lemonims.com/marces/) · [Blanca Ferrer](https://link.lemonims.com/blanca-ferrer/)
 
 ---
 
-## Contexto
+## Context
 
-Lemonims necesitaba un hub centralizado donde cada artista tuviera un perfil con enlaces a sus plataformas (Spotify, YouTube, Instagram, etc.). Soluciones como Linktree no funcionaban; sin control de marca, sin identidad visual por artista, con branding de terceros en un producto que representa a un sello.
+Lemonims needed a centralized hub where each artist had a profile with links to their platforms (Spotify, YouTube, Instagram, etc.). Solutions like Linktree fell short — no brand control, no per-artist visual identity, and third-party branding on a product that represents a label.
 
-La restricción principal no era técnica sino de producto: **Cada perfil debe sentirse como una extensión de la marca del artista, no como una plantilla genérica con colores intercambiados.**
+The main constraint was not technical but product-driven: **Each profile must feel like an extension of the artist's brand, not a generic template with swapped colors.**
 
 ---
 
-## Decisiones Técnicas
+## Technical Decisions
 
-| Decisión | Por qué |
+| Decision | Why |
 |---|---|
-| **Sin framework - TypeScript vanilla** | El producto no tiene estado, reactividad ni composición a escala. Son páginas estáticas con render desde JSON. Introducir un framework habría añadido ~40 kB de runtime para lo que `document.createElement` resuelve en **227 líneas**. Resultado: **0 dependencias de producción**. |
-| **Tokens de diseño (SCSS)** | Spacing (base 4px), tipografía, radius, motion y blur definidos como custom properties en `:root`. Los tokens cambian en breakpoints - los componentes que los consumen se adaptan sin CSS adicional. El token es el contrato entre diseño y componentes. |
-| **Temas por artista via CSS custom properties** | Cada artista (`.theme--marces`, `.theme--arodav`, `.theme--blanca-ferrer`) sobrescribe custom properties: paleta, gradiente, tipografía, glass effects. Blanca Ferrer fue la prueba de estrés: requirió serif propia (Prociono), pesos distintos y padding de CTA diferente - todo resuelto con 6 custom properties sin tocar CSS de componentes. |
-| **Grid layout JSON-driven** | CSS Grid 6×5. Cada card define su posición (`row`, `col`, `rowSpan`, `colSpan`) en el JSON del perfil. TypeScript inyecta esas coordenadas como custom properties. **El layout de cada perfil es datos, no código.** Agregar un artista = un JSON + un HTML. |
-| **Build multi-página (Vite)** | 4 entry points en `rollupOptions`. Cada artista tiene su propio `index.html` con `<title>`, meta tags y favicon propios. URLs limpias (`/arodav/`), SEO nativo, sin SPA routing. |
+| **No framework — vanilla TypeScript** | The product has no state, reactivity, or composition at scale. These are static pages rendered from JSON. Introducing a framework would have added ~40 kB of runtime for what `document.createElement` handles in **227 lines**. Result: **0 production dependencies**. |
+| **Design tokens (SCSS)** | Spacing (base 4px), typography, radius, motion, and blur defined as custom properties on `:root`. Tokens change at breakpoints — components that consume them adapt with no additional CSS. The token is the contract between design and components. |
+| **Per-artist themes via CSS custom properties** | Each artist (`.theme--marces`, `.theme--arodav`, `.theme--blanca-ferrer`) overrides custom properties: palette, gradient, typography, glass effects. Blanca Ferrer was the stress test: she required a custom serif (Prociono), different font weights, and distinct CTA padding — all solved with 6 custom properties without touching component CSS. |
+| **JSON-driven grid layout** | CSS Grid 6×5. Each card defines its position (`row`, `col`, `rowSpan`, `colSpan`) in the profile JSON. TypeScript injects those coordinates as custom properties. **Each profile's layout is data, not code.** Adding an artist = one JSON + one HTML file. |
+| **Multi-page build (Vite)** | 4 entry points in `rollupOptions`. Each artist has their own `index.html` with a dedicated `<title>`, meta tags, and favicon. Clean URLs (`/arodav/`), native SEO, no SPA routing. |
 
-### Patrones destacables
+### Notable Patterns
 
-- **Double `requestAnimationFrame`** para animaciones de entrada - garantiza que el browser pinte el estado inicial (`opacity: 0`) antes de activar transiciones.
-- **Favicon animado** con Page Visibility API - alterna colores cada 2s cuando el tab está oculto, cleanup al volver.
-- **Iconos via CSS `mask`** + `currentColor` - los iconos heredan el color del tema automáticamente, sin inline SVG.
-- **`prefers-reduced-motion`** respetado - todas las animaciones se desactivan.
-- **Progressive enhancement** - HTML semántico funcional sin JavaScript (skip link, `<nav>`, ARIA labels, `lang="es"`).
+- **Double `requestAnimationFrame`** for entry animations — ensures the browser paints the initial state (`opacity: 0`) before triggering transitions.
+- **Animated favicon** with the Page Visibility API — alternates colors every 2s when the tab is hidden, cleans up on return.
+- **Icons via CSS `mask`** + `currentColor` — icons inherit the theme color automatically, no inline SVG needed.
+- **`prefers-reduced-motion`** respected — all animations are disabled.
+- **Progressive enhancement** — semantic HTML works without JavaScript (skip link, `<nav>`, ARIA labels, `lang="es"`).
 
 ---
 
-## Resultados
+## Results
 
-**Bundle final** (minificado, hashed):
+**Final bundle** (minified, hashed):
 
-| | Tamaño |
+| | Size |
 |---|---|
 | JavaScript | 6.2 KB |
 | CSS | 12 KB |
 | **Total core** | **18.2 KB** |
 
-**Código fuente:** 226 líneas de TypeScript (toda la lógica) · 778 líneas de SCSS (todo el sistema visual) · 0 dependencias de producción.
+**Source code:** 226 lines of TypeScript (all logic) · 778 lines of SCSS (entire visual system) · 0 production dependencies.
 
-**Sistema de diseño:** 42 design tokens en `:root` · 3 temas con ~20 custom properties cada uno · 4 breakpoints — responsive automático via tokens.
+**Design system:** 42 design tokens on `:root` · 3 themes with ~20 custom properties each · 4 breakpoints — automatic responsiveness via tokens.
 
-**Accesibilidad:** HTML semántico con landmarks (`header`, `main`, `nav`, `footer`) · 14 atributos ARIA · skip links en todas las páginas · `prefers-reduced-motion` respetado.
+**Accessibility:** Semantic HTML with landmarks (`header`, `main`, `nav`, `footer`) · 14 ARIA attributes · skip links on every page · `prefers-reduced-motion` respected.
 
 ---
 
-## Estructura
+## Structure
 
 ```
 linkims/
-├─ index.html                    → landing Lemonims
-├─ arodav/index.html             → perfil (entry point Vite)
+├─ index.html                    → Lemonims landing page
+├─ arodav/index.html             → profile (Vite entry point)
 ├─ marces/index.html
 ├─ blanca-ferrer/index.html
 ├─ src/
-│  ├─ main.ts                    → render JSON → DOM (227 líneas)
+│  ├─ main.ts                    → render JSON → DOM (227 lines)
 │  ├─ profiles/
-│  │  └─ {artista}/{artista}.json → datos + layout del perfil
+│  │  └─ {artist}/{artist}.json  → profile data + layout
 │  └─ styles/
 │     ├─ tokens/_tokens.scss     → design tokens
-│     ├─ tokens/_themes.scss     → temas por artista
+│     ├─ tokens/_themes.scss     → per-artist themes
 │     ├─ components/             → profile, links, footer
-│     └─ pages/_index.scss       → landing
-├─ public/icons/                 → SVGs de plataformas
-└─ vite.config.ts                → build multi-página
+│     └─ pages/_index.scss       → landing page
+├─ public/icons/                 → platform SVGs
+└─ vite.config.ts                → multi-page build
 ```
 
-**4 devDependencies. 0 producción.**
+**4 devDependencies. 0 production.**
 
 ---
 
-## Desarrollo local
+## Local Development
 
 ```bash
 npm install
@@ -87,4 +87,4 @@ npm run build      # tsc + vite build
 
 ---
 
-Desarrollado por [arodav](https://arodav.com) para [lemonims](https://link.lemonims.com).
+Built by [arodav](https://arodav.com) for [lemonims](https://link.lemonims.com).
