@@ -1,16 +1,16 @@
 # Linkims
 
-Plataforma de enlaces para artistas de [Lemonims](https://lemonims.com) — sello discográfico, booking y management. Producto en producción con usuarios reales.
+Plataforma de enlaces para artistas de [Lemonims](https://lemonims.com). Sello discográfico, booking y management. Producto en producción con usuarios reales.
 
-[Arodav](https://link.lemonims.com/arodav/) · [Marces](https://link.lemonims.com/marces/) · [Blanca Ferrer](https://link.lemonims.com/blanca-ferrer/)
+[Home](https://link.lemonims.com/) · [Marces](https://link.lemonims.com/marces/) · [Blanca Ferrer](https://link.lemonims.com/blanca-ferrer/)
 
 ---
 
 ## Contexto
 
-Lemonims necesitaba un hub centralizado donde cada artista tuviera un perfil con enlaces a sus plataformas (Spotify, YouTube, Instagram, etc.). Soluciones como Linktree no funcionaban: sin control de marca, sin identidad visual por artista, con branding de terceros en un producto que representa a un sello.
+Lemonims necesitaba un hub centralizado donde cada artista tuviera un perfil con enlaces a sus plataformas (Spotify, YouTube, Instagram, etc.). Soluciones como Linktree no funcionaban; sin control de marca, sin identidad visual por artista, con branding de terceros en un producto que representa a un sello.
 
-La restricción principal no era técnica sino de producto: **cada perfil debe sentirse como una extensión de la marca del artista, no como una plantilla genérica con colores intercambiados.**
+La restricción principal no era técnica sino de producto: **Cada perfil debe sentirse como una extensión de la marca del artista, no como una plantilla genérica con colores intercambiados.**
 
 ---
 
@@ -18,9 +18,9 @@ La restricción principal no era técnica sino de producto: **cada perfil debe s
 
 | Decisión | Por qué |
 |---|---|
-| **Sin framework — TypeScript vanilla** | El producto no tiene estado, reactividad ni composición a escala. Son páginas estáticas con render desde JSON. Introducir un framework habría añadido ~40 kB de runtime para lo que `document.createElement` resuelve en **227 líneas**. Resultado: **0 dependencias de producción**. |
-| **Tokens de diseño (SCSS)** | Spacing (base 4px), tipografía, radius, motion y blur definidos como custom properties en `:root`. Los tokens cambian en breakpoints — los componentes que los consumen se adaptan sin CSS adicional. El token es el contrato entre diseño y componentes. |
-| **Temas por artista via CSS custom properties** | Cada artista (`.theme--marces`, `.theme--arodav`, `.theme--blanca-ferrer`) sobrescribe custom properties: paleta, gradiente, tipografía, glass effects. Blanca Ferrer fue la prueba de estrés: requirió serif propia (Prociono), pesos distintos y padding de CTA diferente — todo resuelto con 6 custom properties sin tocar CSS de componentes. |
+| **Sin framework - TypeScript vanilla** | El producto no tiene estado, reactividad ni composición a escala. Son páginas estáticas con render desde JSON. Introducir un framework habría añadido ~40 kB de runtime para lo que `document.createElement` resuelve en **227 líneas**. Resultado: **0 dependencias de producción**. |
+| **Tokens de diseño (SCSS)** | Spacing (base 4px), tipografía, radius, motion y blur definidos como custom properties en `:root`. Los tokens cambian en breakpoints - los componentes que los consumen se adaptan sin CSS adicional. El token es el contrato entre diseño y componentes. |
+| **Temas por artista via CSS custom properties** | Cada artista (`.theme--marces`, `.theme--arodav`, `.theme--blanca-ferrer`) sobrescribe custom properties: paleta, gradiente, tipografía, glass effects. Blanca Ferrer fue la prueba de estrés: requirió serif propia (Prociono), pesos distintos y padding de CTA diferente - todo resuelto con 6 custom properties sin tocar CSS de componentes. |
 | **Grid layout JSON-driven** | CSS Grid 6×5. Cada card define su posición (`row`, `col`, `rowSpan`, `colSpan`) en el JSON del perfil. TypeScript inyecta esas coordenadas como custom properties. **El layout de cada perfil es datos, no código.** Agregar un artista = un JSON + un HTML. |
 | **Build multi-página (Vite)** | 4 entry points en `rollupOptions`. Cada artista tiene su propio `index.html` con `<title>`, meta tags y favicon propios. URLs limpias (`/arodav/`), SEO nativo, sin SPA routing. |
 
@@ -87,4 +87,4 @@ npm run build      # tsc + vite build
 
 ---
 
-Desarrollado por [Arodav](https://arodav.com) para [Lemonims](https://link.lemonims.com).
+Desarrollado por [arodav](https://arodav.com) para [lemonims](https://link.lemonims.com).
