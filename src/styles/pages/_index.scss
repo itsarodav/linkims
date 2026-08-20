@@ -55,16 +55,46 @@
 /* ── Intro ── */
 .home__intro {
   background: var(--color-lime);
-  padding: clamp(10px, 2dvh, 26px) var(--space-5);
+  padding: clamp(10px, 2dvh, 26px) 0;
+  overflow: hidden;
 }
 
-.home__intro-text {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
-  color: var(--color-dark);
+.home__ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.home__ticker-track {
+  display: inline-flex;
+  animation: ticker 12s linear infinite;
+  margin: 0;
+
+  span {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+}
+
+.home__ticker-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ── Artist grid ── */
