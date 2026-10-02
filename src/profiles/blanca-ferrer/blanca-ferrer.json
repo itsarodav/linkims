@@ -4,9 +4,9 @@
     "tagline": "Pianista, compositora y creadora",
     "links": [
         {
-        "label": "\"Helena\" Video Oficial",
-        "url": "https://youtu.be/60sEKpCR2T8?si=Ga9NEbWsoW5C_seo",
-        "icon": "/icons/youtube.svg",
+        "label": "Escucha 'Sokal Affair'",
+        "url": "https://open.spotify.com/intl-es/album/5wszrDGx7PaO2oP6UdGkJK?si=eNphF4RJSMGdRQC7avnyew",
+        "icon": "/icons/headphones.svg",
         "layout": { "row": 1, "rowSpan": 1, "col": 1, "colSpan": 5 },
         "variant": "cta"
         },
