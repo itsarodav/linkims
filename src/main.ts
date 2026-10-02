@@ -199,6 +199,29 @@ if (document.body.classList.contains("page--home")) {
         });
     });
 
+    /* Ticker: the track scrolls -50%, so each half must be at least as wide
+       as the viewport or a gap shows. Repeat the phrase to fill both halves
+       and scale the duration so speed stays at 6s per phrase. */
+    const track = document.querySelector<HTMLElement>(".home__ticker-track");
+    const phrase = track?.firstElementChild as HTMLElement | null;
+    if (track && phrase) {
+        let perHalf = 0;
+        const fillTicker = () => {
+            const tickerWidth = track.parentElement!.clientWidth;
+            const phraseWidth = track.firstElementChild!.getBoundingClientRect().width;
+            if (!phraseWidth) return;
+            const needed = Math.max(2, Math.ceil(tickerWidth / phraseWidth));
+            if (needed === perHalf) return;
+            perHalf = needed;
+            track.replaceChildren(
+                ...Array.from({ length: perHalf * 2 }, () => phrase.cloneNode(true))
+            );
+            track.style.animationDuration = `${perHalf * 6}s`;
+        };
+        document.fonts.ready.then(fillTicker);
+        window.addEventListener("resize", fillTicker);
+    }
+
     /* Desktop-only looping video: sources are attached only at ≥1200px
        without reduced motion, so mobile never downloads it */
     const video = document.querySelector<HTMLVideoElement>("[data-desktop-video]");

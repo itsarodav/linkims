@@ -357,12 +357,14 @@
 /* ── Desktop: hero + ticker arriba, 3 columnas debajo ── */
 @media (min-width: 1200px) {
   .home {
+    --home-gutter: clamp(28px, 3vw, 48px);
     display: grid;
     grid-template-rows: 4fr auto 6fr auto;
   }
 
   .home__hero {
-    padding-inline: clamp(32px, 4vw, 64px);
+    padding-inline: var(--home-gutter);
+    padding-bottom: clamp(32px, 4.5dvh, 56px);
   }
 
   .home__grid {
@@ -387,7 +389,7 @@
   }
 
   .home__card-info {
-    left: clamp(20px, 2vw, 32px);
+    left: var(--home-gutter);
     bottom: clamp(16px, 2dvh, 28px);
   }
 
@@ -403,7 +405,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-inline: clamp(32px, 4vw, 64px);
+    padding-inline: var(--home-gutter);
   }
 
   .home__contact-social {
