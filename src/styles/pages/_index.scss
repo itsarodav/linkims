@@ -333,3 +333,60 @@
     font-size: 22px;
   }
 }
+
+/* ── Desktop: hero + ticker arriba, 3 columnas debajo ── */
+@media (min-width: 1200px) {
+  .home {
+    display: grid;
+    grid-template-rows: 4fr auto 6fr auto;
+  }
+
+  .home__hero {
+    padding-inline: clamp(32px, 4vw, 64px);
+  }
+
+  .home__grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 2.75fr) minmax(0, 2.25fr);
+    grid-template-rows: minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .home__card--bottom {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .home__card--tall {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .home__card--top {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .home__card-info {
+    left: clamp(20px, 2vw, 32px);
+    bottom: clamp(16px, 2dvh, 28px);
+  }
+
+  .home__card-name {
+    font-size: 26px;
+  }
+
+  .home__card-cta {
+    font-size: 14px;
+  }
+
+  .home__contact {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: clamp(32px, 4vw, 64px);
+  }
+
+  .home__contact-social {
+    margin-top: 0;
+  }
+}
