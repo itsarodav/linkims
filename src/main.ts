@@ -199,6 +199,27 @@ if (document.body.classList.contains("page--home")) {
         });
     });
 
+    /* Desktop-only looping video: sources are attached only at ≥1200px
+       without reduced motion, so mobile never downloads it */
+    const video = document.querySelector<HTMLVideoElement>("[data-desktop-video]");
+    const desktopMotion = window.matchMedia(
+        "(min-width: 1200px) and (prefers-reduced-motion: no-preference)"
+    );
+    if (video) {
+        const loadVideo = () => {
+            if (!desktopMotion.matches || video.dataset.loaded) return;
+            video.dataset.loaded = "true";
+            video.querySelectorAll<HTMLSourceElement>("source[data-src]").forEach((s) => {
+                s.src = s.dataset.src!;
+            });
+            video.addEventListener("playing", () => video.classList.add("is-playing"), { once: true });
+            video.load();
+            video.play().catch(() => {});
+        };
+        loadVideo();
+        desktopMotion.addEventListener("change", loadVideo);
+    }
+
     /* Favicon alternates blue/green every 2s when the tab is hidden */
     const favicon = document.querySelector<HTMLLinkElement>('link[rel="icon"]');
     if (favicon) {
