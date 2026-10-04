@@ -5,14 +5,14 @@
     "links": [
         {
         "label": "Escucha 'La Niebla'",
-        "url": "https://open.spotify.com/intl-es/track/4aqrCyrTCPtYPu3BwOXRqG?si=da1f5f20c7314dc0",
+        "url": "https://open.spotify.com/track/4aqrCyrTCPtYPu3BwOXRqG",
         "icon": "/icons/headphones.svg",
         "layout": { "row": 1, "rowSpan": 1, "col": 1, "colSpan": 5 },
         "variant": "cta"
         },
         {
         "label": "Spotify",
-        "url": "https://open.spotify.com/intl-es/artist/0sGaADz9Pc3qOJWGx5OAcr?si=GVpkhzw0R5OFIE5rE7S9-w",
+        "url": "https://open.spotify.com/artist/0sGaADz9Pc3qOJWGx5OAcr",
         "icon": "/icons/spotify.svg",
         "layout": { "row": 2, "rowSpan": 2, "col": 1, "colSpan": 2 },
         "variant": "card"
